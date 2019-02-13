@@ -122,7 +122,11 @@
         
         showPublicThreadsUnreadMessageBadge = YES;
         
-        prefersLargeTitles = YES;
+        if (@available(iOS 11.0, *)) {
+            prefersLargeTitles = YES;
+        } else {
+            prefersLargeTitles = NO;
+        }
         
         forgotPasswordEnabled = YES;
         
